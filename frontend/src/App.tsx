@@ -9,9 +9,12 @@ import {
 import Layout from "./layouts/Layout.tsx";
 import Register from "./Pages/Resgister.tsx";
 import SignIn from "./Pages/signin.tsx";
+import { useAppContext } from "./contexts/AppContext.tsx";
+import AddHotel from "./Pages/AddHotel.tsx";
 
 
 function App() {
+   const { isloggedin } = useAppContext();
      return(
         <Router>
           <Routes>
@@ -28,6 +31,17 @@ function App() {
                 </Layout>
              } 
              />
+
+             {isloggedin && (<>
+               <Route path="/add-hotel" 
+               element={
+                  <Layout>
+                     <AddHotel />
+                  </Layout>
+               }
+               />
+             </>
+             )};
              <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>
