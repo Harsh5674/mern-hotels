@@ -11,6 +11,7 @@ import Register from "./Pages/Resgister.tsx";
 import SignIn from "./Pages/signin.tsx";
 import { useAppContext } from "./contexts/AppContext.tsx";
 import AddHotel from "./Pages/AddHotel.tsx";
+import MyHotels from "./Pages/MyHotels.tsx";
 
 
 function App() {
@@ -37,6 +38,13 @@ function App() {
                element={
                   <Layout>
                      <AddHotel />
+                  </Layout>
+               }
+               />
+               <Route path="/my-hotels" 
+               element={
+                  <Layout>
+                     <MyHotels />
                   </Layout>
                }
                />
