@@ -13,6 +13,7 @@ import { useAppContext } from "./contexts/AppContext.tsx";
 import AddHotel from "./Pages/AddHotel.tsx";
 import MyHotels from "./Pages/MyHotels.tsx";
 import EditHotel from "./Pages/EditHotel.tsx";
+import Search from "./Pages/Search.tsx";
 
 
 function App() {
@@ -23,9 +24,13 @@ function App() {
              <Route path="/" element={<Layout>
               <p>Home Page</p>
              </Layout>} />
-             <Route path="/Search" element={<Layout>
-              <p>Search Page</p>
-             </Layout>} />
+             <Route path="/Search" 
+             element={
+                  <Layout>
+                     <Search />
+                  </Layout>
+            } 
+            />
              <Route path="/register" element={<Layout><Register /></Layout>} />
              <Route path="/sign-in" element={
                 <Layout>
