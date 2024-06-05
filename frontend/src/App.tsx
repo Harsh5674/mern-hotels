@@ -14,6 +14,7 @@ import AddHotel from "./Pages/AddHotel.tsx";
 import MyHotels from "./Pages/MyHotels.tsx";
 import EditHotel from "./Pages/EditHotel.tsx";
 import Search from "./Pages/Search.tsx";
+import Detail from "./Pages/Detail.tsx";
 
 
 function App() {
@@ -28,6 +29,13 @@ function App() {
              element={
                   <Layout>
                      <Search />
+                  </Layout>
+            } 
+            />
+            <Route path="/detail/:hotelId" 
+             element={
+                  <Layout>
+                     <Detail />
                   </Layout>
             } 
             />
