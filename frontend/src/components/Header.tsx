@@ -3,7 +3,7 @@ import { useAppContext } from "../contexts/AppContext";
 import SignOutButton from "./SignOutButton";
 
 function Header(){
-    const {isloggedin} = useAppContext();
+    const {isLoggedIn} = useAppContext();
 
     return (
        <div className="bg-blue-800 py-6">
@@ -12,7 +12,7 @@ function Header(){
                 <Link to="/">MernHolidays.com</Link>
             </span>
             <span className="flex space-x-2 mx-auto sm:mx-0">
-               {isloggedin ? (
+               {isLoggedIn ? (
                 <>
                 <Link className="flex items-center text-white px-3 font-bold hover:bg-blue-600" to="/my-bookings">My Bookings</Link>
                 <Link className="flex items-center text-white px-3 font-bold hover:bg-blue-600" to="/my-hotels">My Hotels</Link>

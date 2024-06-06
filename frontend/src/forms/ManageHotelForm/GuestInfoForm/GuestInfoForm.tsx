@@ -1,9 +1,8 @@
 import { useForm } from "react-hook-form";
 import DatePicker from "react-datepicker";
-
-import { useLocation, useNavigate } from "react-router-dom";
 import { useSearchContext } from "../../../contexts/SearchContext";
 import { useAppContext } from "../../../contexts/AppContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {
   hotelId: string;
@@ -19,7 +18,7 @@ type GuestInfoFormData = {
 
 const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
   const search = useSearchContext();
-  const { isloggedin } = useAppContext();
+  const { isLoggedIn } = useAppContext();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -72,7 +71,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
       <h3 className="text-md font-bold">£{pricePerNight}</h3>
       <form
         onSubmit={
-          isloggedin ? handleSubmit(onSubmit) : handleSubmit(onSignInClick)
+          isLoggedIn ? handleSubmit(onSubmit) : handleSubmit(onSignInClick)
         }
       >
         <div className="grid grid-cols-1 gap-4 items-center">
@@ -142,7 +141,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
               </span>
             )}
           </div>
-          {isloggedin ? (
+          {isLoggedIn ? (
             <button className="bg-blue-600 text-white h-full p-2 font-bold hover:bg-blue-500 text-xl">
               Book Now
             </button>
