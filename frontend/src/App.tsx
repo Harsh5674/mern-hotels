@@ -16,7 +16,7 @@ import {
  import Booking from "./Pages/Booking";
 import MyBookings from "./Pages/MyBookings";
  //import MyBookings from "./Pages/MyBookings";
- //import Home from "./pages/Home";
+ import Home from "./Pages/Home";
  
  const App = () => {
    const { isLoggedIn } = useAppContext();
@@ -27,7 +27,7 @@ import MyBookings from "./Pages/MyBookings";
            path="/"
            element={
              <Layout>
-               HOME
+               <Home />
              </Layout>
            }
          />
