@@ -14,6 +14,7 @@ import {
  import Search from "./Pages/Search";
  import Detail from "./Pages/Detail";
  import Booking from "./Pages/Booking";
+import MyBookings from "./Pages/MyBookings";
  //import MyBookings from "./Pages/MyBookings";
  //import Home from "./pages/Home";
  
@@ -102,7 +103,7 @@ import {
                path="/my-bookings"
                element={
                  <Layout>
-                   MY BOOKINGS
+                   <MyBookings />
                  </Layout>
                }
              />
